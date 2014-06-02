@@ -1,4 +1,4 @@
-package autotype;
+package tv.sonis.autotyper;
 
 import static java.awt.event.KeyEvent.*;
 

@@ -1,4 +1,4 @@
-package autotype;
+package tv.sonis.autotyper;
 
 import java.awt.AWTException;
 import java.awt.Robot;
