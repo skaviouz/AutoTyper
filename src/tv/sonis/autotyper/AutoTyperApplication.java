@@ -47,6 +47,7 @@ public class AutoTyperApplication extends javax.swing.JFrame implements Runnable
     public AutoTyperApplication() {
         initComponents();
         setTitle("AutoTyper Application by Skaviouz");
+        setVisible(true);
     }
 
     /**
@@ -200,56 +201,14 @@ public class AutoTyperApplication extends javax.swing.JFrame implements Runnable
         }
     }//GEN-LAST:event_repeatFieldKeyTyped
 
-
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AutoTyperApplication().setVisible(true);
-            }
-        });
-        ata = new AutoTyperApplication("Location not needed");
-        typeprocess = new Thread(ata);
+        java.awt.EventQueue.invokeLater(new AutoTyperApplication());
     }
 
     public void run() {
-        boolean neverEnd = true;
-        while (neverEnd) {
-            boolean running = false;
-            stateF7.isOn = false;
-            stateF8.isOn = false;
-            if (stateF7.isOn == true) {
-                jLabel4.setForeground(Color.red);
-            } else {
-                jLabel4.setForeground(Color.blue);
-            }
-            if (stateF8.isOn == true) {
-                jLabel5.setForeground(Color.red);
-            } else {
-                jLabel5.setForeground(Color.blue);
-            }
-            /*
-             while (running == true) {
-
-             }
-             System.out.println("Starting in 10...");
-             if (provider != null) {
-             System.out.println("Press F5 to pause or resume typing.");
-             }
-             sleep(10.0D);
-
-             typer.Type();
-             if (provider != null) {
-             provider.reset();
-             provider.stop();
-             }
-             System.out.println("Finished typing!");*/
-        }
-        System.exit(0);
     }
 
     public void Type() throws IllegalArgumentException {
@@ -297,8 +256,8 @@ public class AutoTyperApplication extends javax.swing.JFrame implements Runnable
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel jLabel4;
+    public static javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
